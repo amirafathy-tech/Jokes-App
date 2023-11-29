@@ -6,9 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Created by jt on 5/25/17.
- */
+
 @Controller
 public class JokeController {
 
@@ -19,7 +17,7 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @RequestMapping({"/", ""})
+    @RequestMapping({"/", ""}) // to handle requests
     public String showJoke(Model model){
 
         model.addAttribute("joke", jokeService.getJoke());
